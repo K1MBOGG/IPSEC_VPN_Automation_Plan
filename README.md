@@ -9,7 +9,7 @@ El objetivo de este documento es presentar el diseño y el plan de implementaci�
 
 El documento se divide en dos partes principales:
 
-### 🧠 PART 1 — High-Level Design (HLD)
+### 🧠 High-Level Design (HLD)
 En esta sección se describen los aspectos de diseño de la solución, incluyendo:
 
 - Arquitectura general  
@@ -19,11 +19,11 @@ En esta sección se describen los aspectos de diseño de la solución, incluyend
 - Parámetros de la VPN  
 - Riesgos y desafíos  
 
-Ir directo al Documento de Diseño: [HLD](#-part-1--high-level-design-hld-1)
+Ir directo al Documento de Diseño: [HLD](#-part-1--high-level-design-hld)
 
 ---
 
-### ⚙️ PART 2 — Network Implementation Plan (NIP)
+### ⚙️ Network Implementation Plan (NIP)
 En esta sección se detalla el proceso de implementación y validación, incluyendo:
 
 - Parámetros de entrada (Source of Truth)  
