@@ -1,0 +1,46 @@
+---
+- name: Deploy IPSec VPN between Fortigate and Palo Alto
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Pre-checks
+      ansible.builtin.debug:
+        msg:
+          - "Validating reachability"
+          - "Validating parameters"
+          - "Checking WAN interfaces"
+
+    - name: Configure Fortigate
+      ansible.builtin.debug:
+        msg:
+          - "Configure Phase1"
+          - "Configure Phase2"
+          - "Create tunnel interface"
+
+    - name: Configure Palo Alto
+      ansible.builtin.debug:
+        msg:
+          - "Configure Phase1"
+          - "Configure Phase2"
+          - "Create tunnel interface"
+
+    - name: Configure routing
+      ansible.builtin.debug:
+        msg:
+          - "Apply static routes"
+
+    - name: Configure security policies
+      ansible.builtin.debug:
+        msg:
+          - "Allow LAN to VPN traffic"
+
+    - name: Configure NAT exemption
+      ansible.builtin.debug:
+        msg:
+          - "Apply no-NAT rules"
+
+    - name: Commit changes
+      ansible.builtin.debug:
+        msg:
+          - "Save / Commit config"

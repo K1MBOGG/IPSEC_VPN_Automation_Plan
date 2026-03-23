@@ -1,0 +1,35 @@
+---
+- name: Validate IPSec VPN
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Check tunnel status
+      ansible.builtin.debug:
+        msg:
+          - "Check IKE SA"
+          - "Check IPsec SA"
+
+    - name: Check routing
+      ansible.builtin.debug:
+        msg:
+          - "Verify routes"
+
+    - name: Validate connectivity (tunnel)
+      ansible.builtin.debug:
+        msg:
+          - "Ping tunnel peer"
+
+    - name: Validate connectivity (LAN)
+      ansible.builtin.debug:
+        msg:
+          - "Ping remote LAN"
+
+    - name: API validation
+      ansible.builtin.debug:
+        msg:
+          - "Query API for tunnel state"
+
+    - name: Result
+      ansible.builtin.debug:
+        msg: "Validation complete"

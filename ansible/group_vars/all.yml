@@ -1,0 +1,37 @@
+vpn_name: vpn_to_paloalto
+
+fortigate:
+  hostname: fg01
+  mgmt_ip: 203.0.113.10
+  wan_ip: 203.0.113.10
+  lan_subnets:
+    - 10.10.10.0/24
+  tunnel_ip: 169.254.1.1/30
+
+paloalto:
+  hostname: pa01
+  mgmt_ip: 198.51.100.20
+  wan_ip: 198.51.100.20
+  lan_subnets:
+    - 192.168.1.0/24
+  tunnel_ip: 169.254.1.2/30
+
+tunnel:
+  network: 169.254.1.0/30
+
+ike:
+  version: ikev2
+  encryption: aes256
+  integrity: sha256
+  dh_group: 14
+  lifetime: 28800
+  psk: vpn_shared_key
+
+ipsec:
+  encryption: aes256
+  integrity: sha256
+  pfs: group14
+  lifetime: 3600
+
+routing:
+  type: static
