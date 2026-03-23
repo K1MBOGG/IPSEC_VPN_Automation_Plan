@@ -19,7 +19,7 @@ En esta sección se describen los aspectos de diseño de la solución, incluyend
 - Parámetros de la VPN  
 - Riesgos y desafíos  
 
-Ir directo al Documento de Diseño: [HLD](#-part-1--high-level-design-hld)
+Ir directo al Documento de Diseño: [HLD](#hld)
 
 ---
 
@@ -33,10 +33,10 @@ En esta sección se detalla el proceso de implementación y validación, incluye
 - Validación automatizada y testing  
 - Rollback y monitoreo  
 
-Ir directo al Plan de Implementacion: [NIP](#-part-2--network-implementation-plan-nip)
+Ir directo al Plan de Implementacion: [NIP](#nip)
 
 ---
-
+<a id="hld"></a>
 # 🧠 PART 1 — High-Level Design (HLD)
 
 ## 1. Introducción
@@ -1459,6 +1459,7 @@ Para reducir los riesgos identificados, se recomienda:
 - El diseño debe contemplar escenarios de falla  
 
 ---
+<a id="nip"></a>
 # ⚙️ PART 2 — Network Implementation Plan (NIP)
 
 ## 16. Overview de Implementación
