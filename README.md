@@ -19,6 +19,8 @@ En esta sección se describen los aspectos de diseño de la solución, incluyend
 - Parámetros de la VPN  
 - Riesgos y desafíos  
 
+Ir directo al Documento de Diseño: [PART1](#-part-1--high-level-design-hld)
+
 ---
 
 ### ⚙️ PART 2 — Network Implementation Plan (NIP)
@@ -30,6 +32,8 @@ En esta sección se detalla el proceso de implementación y validación, incluye
 - Deployment plan  
 - Validación automatizada y testing  
 - Rollback y monitoreo  
+
+Ir directo al Plan de Implementacion: [PART2](#-part-2-network-implementation-plan-nip)
 
 ---
 
