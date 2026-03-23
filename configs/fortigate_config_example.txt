@@ -1,0 +1,52 @@
+# Fortigate example configuration - conceptual
+
+config vpn ipsec phase1-interface
+    edit "vpn_to_paloalto"
+        set interface "wan1"
+        set remote-gw 198.51.100.20
+        set ike-version 2
+        set proposal aes256-sha256
+        set dhgrp 14
+        set psksecret "vpn_shared_key"
+    next
+end
+
+config vpn ipsec phase2-interface
+    edit "vpn_to_paloalto_p2"
+        set phase1name "vpn_to_paloalto"
+        set proposal aes256-sha256
+        set pfs enable
+        set dhgrp 14
+    next
+end
+
+config system interface
+    edit "vpn_to_paloalto"
+        set ip 169.254.1.1 255.255.255.252
+        set type tunnel
+        set remote-ip 169.254.1.2 255.255.255.252
+        set interface "wan1"
+    next
+end
+
+config router static
+    edit 1
+        set dst 192.168.1.0 255.255.255.0
+        set device "vpn_to_paloalto"
+    next
+end
+
+config firewall policy
+    edit 1
+        set name "LAN_to_VPN"
+        set srcintf "lan"
+        set dstintf "vpn_to_paloalto"
+        set srcaddr "all"
+        set dstaddr "all"
+        set action accept
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+        set nat disable
+    next
+end
