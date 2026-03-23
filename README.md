@@ -1,26 +1,49 @@
-# 🔐 Plan de Automatizacion IPSec VPN
+# 🔐 Plan de Automatización IPSec VPN
 **Fortigate ↔ Palo Alto**
+
+---
+
+## 📄 Estructura del Documento
+
+El objetivo de este documento es presentar el diseño y el plan de implementación para la automatización de una VPN IPSec site-to-site entre un firewall Fortigate y un firewall Palo Alto.
+
+El documento se divide en dos partes principales:
+
+### 🧠 PART 1 — High-Level Design (HLD)
+En esta sección se describen los aspectos de diseño de la solución, incluyendo:
+
+- Arquitectura general  
+- Decisiones de diseño  
+- Supuestos y requerimientos  
+- Consideraciones de red, seguridad y WAN  
+- Parámetros de la VPN  
+- Riesgos y desafíos  
+
+---
+
+### ⚙️ PART 2 — Network Implementation Plan (NIP)
+En esta sección se detalla el proceso de implementación y validación, incluyendo:
+
+- Parámetros de entrada (Source of Truth)  
+- Workflow de automatización con Ansible  
+- Pre-checks y post-checks  
+- Deployment plan  
+- Validación automatizada y testing  
+- Rollback y monitoreo  
 
 ---
 
 # 🧠 PART 1 — High-Level Design (HLD)
 
 ## 1. Introducción
-El objetivo de este documento es presentar el diseño y el plan de implementación para la automatización de una VPN IPSec site-to-site entre un firewall Fortigate y un firewall Palo Alto.
+En esta sección se describe el diseño de la solución para la implementación de una VPN IPSec site-to-site entre un firewall Fortigate y un firewall Palo Alto.
 
-El documento se divide en dos partes:
+La automatización se plantea utilizando **Ansible** como framework principal de orquestación para:
 
-- **High-Level Design (HLD):** enfocado en la arquitectura, planificación, supuestos, requerimientos técnicos y consideraciones operativas necesarias para una implementación consistente.
-- **Low-Level Design (LLD) / Implementation Plan:** enfocado en la lógica de despliegue, validaciones previas, ejecución del cambio, pruebas posteriores y estrategia de verificación.
-
-En este documento también se contempla aspectos asociados al diseño de conectividad, routing, seguridad, validación operativa, observabilidad y escalabilidad.
-
-Los dispositivos considerados en este documento son:
-
-- **Firewall Fortigate**
-- **Firewall Palo Alto**
-
-La automatización se plantea utilizando **Ansible** como framework principal de orquestación para pre-checks, despliegue de configuración, post-checks y validación básica.
+- Pre-checks  
+- Despliegue de configuración  
+- Post-checks  
+- Validación básica  
 
 ---
 
